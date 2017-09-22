@@ -1,0 +1,46 @@
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+@namespace html url(http://www.w3.org/1999/xhtml);
+@-moz-document url("chrome://global/content/viewSource.xul"),
+               url("chrome://global/content/viewPartialSource.xul"),
+               url-prefix("view-source:"){
+
+html {
+   background: #151515 !important;
+   color: #aaa !important;
+}
+
+body {
+   font-size: 13px !important;
+   font-family: 'mononoka' !important;
+}
+
+a {
+   color:#ccc !important;
+}
+.attribute-name {color: #396687 !important;}
+.start-tag, .end-tag {color: #9F64D5 !important}
+.attribute-value {color: #A56238 !important;}
+.comment {color: #666 !important;}
+.entity {color:#5AB762  !important;}
+::-moz-selection {background-color: #aaa !important; color: #000 !important; }
+}
+
+.highlight .attribute-name {
+   color: black;
+   font-weight: inherit !important;
+   font-style: italic !important;
+   padding: 1px;
+}
+
+.highlight .start-tag {
+   color: purple;
+   font-weight: inherit !important;
+   padding: 1px;
+   font-style: italic !important;
+}
+.highlight .end-tag {
+   color: purple;
+   font-weight: inherit !important;
+   font-style: italic !important;
+   padding: 1px;
+}
