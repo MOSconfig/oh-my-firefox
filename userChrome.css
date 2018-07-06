@@ -1,22 +1,24 @@
 /* FONT {{{ */
 
 * {
-    font-family: "Source Code Pro", "Microsoft Yahei Mono" !important;
-    font-size: 14px;
-    font-weight: normal !important;
+    font-family: "Souce Code Pro for Powerline", "Consolas-with-Yahei" !important;
+    font-size: 13px;
+    font-weight: lighter !important;
 }
 
 /* }}} */
 
 /* BOOKMARK ICON {{{ */
-
 .bookmark-item[container]:not([query="true"]) {
     list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVQ4T2NkoBAw+vj4XGBgYNBHMufDv3//HLdt2wYSJwhABvzHouoDAwMDQQP+//9/AZcBBG2GKWD09vYuYGRk5CdaB6pCRpABHygw4APlXsARiET7aNQFDAyDIwzQMxPRUcjAwHCRkRTV2NQCAAI/KGdF3XcGAAAAAElFTkSuQmCC') !important;
-    -moz-image-region: rect(0px, 12px, 12px, 0px) !important;
+    -moz-image-region: rect(0px, 12px, 8px, 0px) !important;
+    margin-top: 2px !important;
+    margin-bottom: 3px !important;
 }
 
 .bookmark-item {
     list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVQ4T+3TwQ3DIAwAQBsGaEfpCHlbPDpCRugGbTfoCNkBwzfNBhmlE9iVpSC1JJEYIHyQbXTCyCAsi4gu3vtTies9xjht1bAkQwhvAHjsAC9VnVNKfV3/A5i52wIMF5EBEbsaaQYMJ6K+RpoBABjtdqp6RcSJmW8WNwF1W9ZSafcAjkdcDRIi3vd+429eVZ+rQbLv7Jw7twAi8sk5z3b2C/G+ihHL2pYmAAAAAElFTkSuQmCC') !important;
+    margin-top: 2px !important;
+    margin-bottom: 3px !important;
 }
-
 /* }}} */
