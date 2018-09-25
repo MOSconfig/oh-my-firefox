@@ -1,11 +1,9 @@
 /* FONT {{{ */
-
 * {
-    font-family: "Souce Code Pro for Powerline", "Consolas-with-Yahei" !important;
-    font-size: 13px;
-    font-weight: lighter !important;
+    font-family: "Souce Code Pro Semibold", "Consolas-with-Yahei" !important;
+    font-size: 14px;
+    font-weight: 500 !important;
 }
-
 /* }}} */
 
 /* BOOKMARK ICON {{{ */
