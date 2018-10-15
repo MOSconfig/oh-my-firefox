@@ -2218,7 +2218,7 @@ IMPORTANT: change the Internal UUID */
         .vimvixen-console-completion {
             background-color: var(--tone-8)!important;
             color: #b1b1b3!important;
-            font-family: Menlo,monospace!important
+            font-family: "fira code", "Consolas-with-Yahei" !important
         }
         .vimvixen-console-command,
         .vimvixen-console-command-input {
