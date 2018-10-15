@@ -999,6 +999,7 @@ statuspanel .statuspanel-label {
 * {
     font-family: "fira code", "Consolas-with-Yahei" !important;
     font-size: 14px;
+    font-weight: 500 !important;
 }
 /* }}} */
 
