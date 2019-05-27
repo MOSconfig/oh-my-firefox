@@ -997,9 +997,8 @@ statuspanel .statuspanel-label {
 
 /* FONT {{{ */
 * {
-    font-family: "Source Code Pro", "Consolas-with-Yahei" !important;
+    font-family: "Source Code Pro", "Micrsoft Yahei UI", "Microsoft Yahei", "Consolas-with-Yahei" !important;
     font-size: 13px;
-    font-weight: 500 !important;
 }
 /* }}} */
 
