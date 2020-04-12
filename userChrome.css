@@ -211,8 +211,8 @@ url(chrome://browser/content/pageinfo/pageInfo.xul) {
 }
 #urlbar[focused=true],
 .searchbar-textbox[focused=true] {
-    border: 1px solid!important;
-    box-shadow: 0 1px 4px var(--in-content-border-focus)!important;
+    border: 0px solid!important;
+    box-shadow: 0 0px 0px var(--in-content-border-focus)!important;
     border-color: var(--in-content-border-focus)!important
 }
 #PopupAutoCompleteRichResult .autocomplete-richlistbox,
