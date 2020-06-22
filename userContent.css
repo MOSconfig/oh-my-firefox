@@ -703,51 +703,78 @@ input#appid {
     }
 }
 
-@-moz-document url-prefix(https: //raw.githubusercontent.com) {
-html {
-    background: var(--in-content-page-background)!important;
-    color: var(--in-content-page-color)!important
-}
-
-}
-
-@-moz-document url-prefix(view-source) {
-    :root {
-        background-color: var(--in-content-page-background)!important;
-        color: var(--in-content-page-color)!important
+@-moz-document url-prefix(view-source:) {
+    *|*:root {
+        background: none !important;
+    }
+    #viewsource {
+        font-style: normal !important;
+        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-size: 14px !important;
+        line-height: 1.2em;
+        font-weight: normal !important;
+        background-color: #1d2021;
+        color: #ebdbb2 !important;
     }
     pre[id]:before, span[id]:before {
-        color: var(--in-content-page-color)!important
+        width: 6ch !important;
+        color: #ebdbb2 !important;
+        margin-left: -7ch !important;
     }
-    .highlight .end-tag, .highlight .start-tag {
-        color: var(--theme-highlight-purple)!important
+    pre {
+        padding-left: 1ch;
+        margin-left: 6ch !important;
+        border-left: 2px solid #282828;
+    }
+    pre > :first-child {
+        padding-right: 1ch;
+    }
+    .highlight {
+        font-weight: normal !important;
+    }
+    .highlight .start-tag {
+        color: #98971a !important;
+        font-weight: normal !important;
+    }
+    .highlight .end-tag {
+        color: #98971a !important;
+        font-weight: normal !important;
     }
     .highlight .comment {
-        color: var(--theme-highlight-green)!important
+        color: #689d6a !important;
+        font-weight: normal !important;
     }
     .highlight .cdata {
-        color: #c06!important
+        color: #d65d0e !important;
+        font-weight: normal !important;
     }
     .highlight .doctype {
-        color: #4682b4!important
+        color: #458588 !important;
+        font-weight: normal !important;
     }
     .highlight .pi {
-        color: var(--theme-highlight-red)!important
+        color: #83a598 !important;
+        font-weight: normal !important;
     }
     .highlight .entity {
-        color: #dea174!important
+        color: #fe8019 !important;
+        font-weight: normal !important;
     }
     .highlight .attribute-name {
-        color: var(--theme-highlight-green)!important
+        color: #93a1a1 !important;
+        font-weight: normal !important;
     }
     .highlight .attribute-value {
-        color: var(--theme-highlight-blue)!important
+        color: #83a598 !important;
+        font-weight: normal !important;
     }
     .highlight .markupdeclaration {
-        color: #4682b4!important
+        color: #b8bb26 !important;
+        font-weight: normal !important;
     }
     .highlight .error, .highlight .error > :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
-        color: #de7474!important
+        color: #fb4934 !important;
+        font-weight: normal !important;
     }
 }
 
@@ -1920,7 +1947,7 @@ html {
     .vimvixen-console-completion {
         background-color: var(--tone-8)!important;
         color: #b1b1b3!important;
-        font-family: "Consolas", "Microsoft Yahei", "Microsoft Yahei UI" !important
+        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
     }
     .vimvixen-console-command, .vimvixen-console-command-input {
         background-color: var(--tone-9)!important;
@@ -1949,5 +1976,13 @@ html {
     ::-moz-selection {
         color: var(--grey-30);
         background: var(--accent-2)
+    }
+}
+
+@namespace url(http://www.w3.org/1999/xhtml);
+@-moz-document regexp("chrome://browser/content/devtools/.*") {
+    * {
+        font-size: 20px !important;
+        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
     }
 }
