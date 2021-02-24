@@ -709,7 +709,7 @@ input#appid {
     }
     #viewsource {
         font-style: normal !important;
-        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-family: "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
         font-size: 14px !important;
         line-height: 1.2em;
         font-weight: normal !important;
@@ -1947,7 +1947,7 @@ input#appid {
     .vimvixen-console-completion {
         background-color: var(--tone-8)!important;
         color: #b1b1b3!important;
-        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-family: "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
     }
     .vimvixen-console-command, .vimvixen-console-command-input {
         background-color: var(--tone-9)!important;
@@ -1983,6 +1983,6 @@ input#appid {
 @-moz-document regexp("chrome://browser/content/devtools/.*") {
     * {
         font-size: 20px !important;
-        font-family: "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-family: "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI", "Microsoft YaHei", "Consolas-with-Yahei" !important;
     }
 }
