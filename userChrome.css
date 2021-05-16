@@ -922,8 +922,8 @@ statuspanel .statuspanel-label {
 }
 
 * {
-    font-family: "Monaco For Powershell", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI", "Microsoft YaHei", "Consolas-with-Yahei" !important;
-    font-size: 13px !important;
+    font-family: "Monaco For Powerline", "Monaco", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI", "Microsoft YaHei", "Consolas-with-Yahei" !important;
+    font-size: 14px !important;
 }
 
 .bookmark-item[container]:not([query="true"]) {
