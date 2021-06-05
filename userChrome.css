@@ -120,42 +120,41 @@
 }
 
 @-moz-document url-prefix(about:), url-prefix(chrome: //browser) {
-.checkbox-check, .prefs-pane [type=checkbox]:checked + label::before, .prefs-pane [type=checkbox]:not(:checked) + label::before, .radio-check, input[type=checkbox] {
-    -moz-appearance: none!important;
-    border: 1px solid!important;
-    background-color: var(--in-content-box-background)!important;
-    background-image: none!important;
-    box-shadow: none!important;
-    border-color: var(--in-content-box-border-color)!important
-}
+    .checkbox-check, .prefs-pane [type=checkbox]:checked + label::before, .prefs-pane [type=checkbox]:not(:checked) + label::before, .radio-check, input[type=checkbox] {
+        -moz-appearance: none!important;
+        border: 1px solid!important;
+        background-color: var(--in-content-box-background)!important;
+        background-image: none!important;
+        box-shadow: none!important;
+        border-color: var(--in-content-box-border-color)!important
+    }
 
-radio[disabled=true] {
-    color: var(--in-content-box-border-color)!important
-}
+    radio[disabled=true] {
+        color: var(--in-content-box-border-color)!important
+    }
 
-.radio-check[selected] {
-    list-style-image: url(chrome://global/skin/icons/radio.svg);
-    fill: var(--in-content-border-highlight)!important;
-    -moz-context-properties: fill, stroke;
-    stroke: none;
-    border-radius: 50%!important
-}
+    .radio-check[selected] {
+        list-style-image: url(chrome://global/skin/icons/radio.svg);
+        fill: var(--in-content-border-highlight)!important;
+        -moz-context-properties: fill, stroke;
+        stroke: none;
+        border-radius: 50%!important
+    }
 
-.checkbox-check[checked] {
-    list-style-image: url(chrome://global/skin/icons/check.svg)!important;
-    fill: var(--in-content-border-highlight)!important;
-    -moz-context-properties: fill, stroke;
-    stroke: none
-}
+    .checkbox-check[checked] {
+        list-style-image: url(chrome://global/skin/icons/check.svg)!important;
+        fill: var(--in-content-border-highlight)!important;
+        -moz-context-properties: fill, stroke;
+        stroke: none
+    }
 
-html body div.ancillary div div.opsRow div.opsRowLabel label input, html body div.ancillary div div.opsRow div.opsRowLabel label input#verbose {
-    -moz-appearance: checkbox!important;
-    min-height: 10px!important;
-    min-width: 10px!important;
-    margin-top: -5px;
-    margin-bottom: -1px
-}
-
+    html body div.ancillary div div.opsRow div.opsRowLabel label input, html body div.ancillary div div.opsRow div.opsRowLabel label input#verbose {
+        -moz-appearance: checkbox!important;
+        min-height: 10px!important;
+        min-width: 10px!important;
+        margin-top: -5px;
+        margin-bottom: -1px
+    }
 }
 
 @-moz-document url-prefix(about:), url-prefix(chrome: //browser/content/preferences/),
@@ -700,52 +699,52 @@ toolbar[brighttext] {
 }
 
 @-moz-document url-prefix(chrome: //browser/content/preferences/cookies.xul) {
-#CookiesDialog {
-    -moz-appearance: none!important;
-    background-color: var(--in-content-page-background)!important
-}
+    #CookiesDialog {
+        -moz-appearance: none!important;
+        background-color: var(--in-content-page-background)!important
+    }
 
-#domainCol, #nameCol {
-    -moz-appearance: none!important;
-    border: none!important
-}
+    #domainCol, #nameCol {
+        -moz-appearance: none!important;
+        border: none!important
+    }
 
-#domainCol {
-    border-right: 1px solid!important;
-    border-color: var(--in-content-box-border-color)!important
-}
+    #domainCol {
+        border-right: 1px solid!important;
+        border-color: var(--in-content-box-border-color)!important
+    }
 
-.windowDialog, textbox {
-    color: var(--in-content-page-color)!important
-}
+    .windowDialog, textbox {
+        color: var(--in-content-page-color)!important
+    }
 
-textbox[type=search] {
-    -moz-appearance: none!important;
-    background-color: var(--in-content-box-background)!important;
-    border: 1px solid;
-    border-color: var(--in-content-box-border-color)!important;
-    border-radius: 3px!important;
-    padding: 2px 4px 2px 2px!important
-}
+    textbox[type=search] {
+        -moz-appearance: none!important;
+        background-color: var(--in-content-box-background)!important;
+        border: 1px solid;
+        border-color: var(--in-content-box-border-color)!important;
+        border-radius: 3px!important;
+        padding: 2px 4px 2px 2px!important
+    }
 
-#cookiesList {
-    -moz-appearance: none!important;
-    border: 1px solid!important;
-    border-color: var(--in-content-box-border-color)!important
-}
+    #cookiesList {
+        -moz-appearance: none!important;
+        border: 1px solid!important;
+        border-color: var(--in-content-box-border-color)!important
+    }
 
-button {
-    -moz-appearance: none!important;
-    background-color: var(--in-content-page-background)!important;
-    border: 1px solid!important;
-    border-radius: 3px!important;
-    color: var(--in-content-page-color)!important;
-    border-color: var(--in-content-box-border-color)!important
-}
+    button {
+        -moz-appearance: none!important;
+        background-color: var(--in-content-page-background)!important;
+        border: 1px solid!important;
+        border-radius: 3px!important;
+        color: var(--in-content-page-color)!important;
+        border-color: var(--in-content-box-border-color)!important
+    }
 
-button:hover {
-    background-color: var(--in-content-box-background)!important
-}
+    button:hover {
+        background-color: var(--in-content-box-background)!important
+    }
 
 }
 
