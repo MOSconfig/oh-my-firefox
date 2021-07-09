@@ -15,3 +15,30 @@
     margin-top: 2px !important;
     margin-bottom: 3px !important;
 }
+
+menupopup,
+menupopup > menu > menupopup,
+menupopup scrollbox,
+popup,
+popup > menu > menupopup {
+    -moz-appearance: none !important;
+    background: #111 !important;
+    border: none !important;
+    padding: 0!important
+}
+.menu-right {
+    filter: invert(95%)!important
+}
+#context-navigation menuitem,
+.panel-arrowcontent {
+    color: #CCC !important;
+    background: #111 !important
+}
+#context-navigation menuitem:hover {
+    background: #151515 !important
+}
+menuitem,
+menupopup menu {
+    -moz-appearance: none!important;
+    color: #CCC !important
+}
