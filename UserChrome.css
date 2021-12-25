@@ -34,7 +34,6 @@
 }
 
 #mainPopupSet menuitem:hover,
-#mainPopupSet .menu-iconic-icon:hover,
 #mainPopupSet menu:hover {
     background: var(--mtheme-background-2) !important
 }
