@@ -37,3 +37,12 @@
 #mainPopupSet menu:hover {
     background: var(--mtheme-background-2) !important
 }
+
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser,
+browser[type=content-primary],
+browser[type=content] > html {
+  background: var(--mtheme-background-1) !important
+}

@@ -1,4 +1,4 @@
-@-moz-document url-prefix(view-source:) {
+@-moz-document url-prefix("view-source:") {
     *|*:root {
         background: none !important;
     }
@@ -108,5 +108,19 @@
     .devtools-tab-label {
         font-size: 14px !important;
         font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+    }
+}
+
+/* This is a temporal solution for white flash, which is a well-known bug in Firefox. */
+html {
+    background: #121212;
+}
+
+@-moz-document url("about:home"),
+url("about:blank"),
+url("about:newtab"),
+url("about:privatebrowsing") {
+    body {
+        background-color: #121212 !important
     }
 }
