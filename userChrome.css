@@ -1,44 +1,48 @@
 * {
-    font-family: "Hasklig", "Source code pro", "Monaco For Powerline", "Monaco", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI", "Microsoft YaHei", "Consolas-with-Yahei" !important;
-    font-size: 14px !important;
+    font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+    font-size: 15px !important;
 }
 
-/* .bookmark-item[container]:not([query="true"]) {
-    list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVQ4T2NkoBAw+vj4XGBgYNBHMufDv3//HLdt2wYSJwhABvzHouoDAwMDQQP+//9/AZcBBG2GKWD09vYuYGRk5CdaB6pCRpABHygw4APlXsARiET7aNQFDAyDIwzQMxPRUcjAwHCRkRTV2NQCAAI/KGdF3XcGAAAAAElFTkSuQmCC') !important;
-    -moz-image-region: rect(0px, 12px, 8px, 0px) !important;
-    margin-top: 2px !important;
-    margin-bottom: 3px !important;
+:root {
+    --mtheme-background-1: #121212 !important;
+    --mtheme-background-2: #232323 !important;
+    --mtheme-foreground-1: #CCCCCC !important;
+    --mtheme-foreground-2: #666666 !important;
 }
 
-.bookmark-item {
-    list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAoklEQVQ4T+3TwQ3DIAwAQBsGaEfpCHlbPDpCRugGbTfoCNkBwzfNBhmlE9iVpSC1JJEYIHyQbXTCyCAsi4gu3vtTies9xjht1bAkQwhvAHjsAC9VnVNKfV3/A5i52wIMF5EBEbsaaQYMJ6K+RpoBABjtdqp6RcSJmW8WNwF1W9ZSafcAjkdcDRIi3vd+429eVZ+rQbLv7Jw7twAi8sk5z3b2C/G+ihHL2pYmAAAAAElFTkSuQmCC') !important;
-    margin-top: 2px !important;
-    margin-bottom: 3px !important;
-} */
+#mainPopupSet menupopup {
+    --panel-padding: 0 !important;
+}
 
-menupopup,
-menupopup > menu > menupopup,
-menupopup scrollbox,
-popup,
-popup > menu > menupopup {
-    -moz-appearance: none !important;
-    background: #111 !important;
-    border: none !important;
-    padding: 0!important
+#context-navigation:not([hidden]) {
+    padding: 0 !important;
 }
-.menu-right {
-    filter: invert(95%)!important
+
+#mainPopupSet menuseparator {
+    appearance: none !important;
+    border-top: 1px solid var(--mtheme-background-2) !important;
+    border-bottom: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
-#context-navigation menuitem,
-.panel-arrowcontent {
-    color: #CCC !important;
-    background: #111 !important
+
+#mainPopupSet menuitem,
+#mainPopupSet .menu-iconic-icon,
+#mainPopupSet menu {
+    color: var(--mtheme-foreground-1) !important;
+    background: var(--mtheme-background-1) !important
 }
-#context-navigation menuitem:hover {
-    background: #151515 !important
+
+#mainPopupSet menuitem:hover,
+#mainPopupSet menu:hover {
+    background: var(--mtheme-background-2) !important
 }
-menuitem,
-menupopup menu {
-    -moz-appearance: none!important;
-    color: #CCC !important
+
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser,
+browser[type=content-primary],
+browser[type=content] > html {
+  background: var(--mtheme-background-1) !important
 }
