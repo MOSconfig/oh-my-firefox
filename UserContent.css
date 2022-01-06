@@ -5,8 +5,8 @@
 
     #viewsource {
         font-style: normal !important;
-        font-family: "UbuntuMono NF", "Micrsoft YaHei UI" !important;
-        font-size: 16px !important;
+        font-family: "UbuntuMono NF", "FiraCode NF", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        font-size: 14px !important;
         line-height: 1.2em;
         font-weight: normal !important;
         background-color: #121212;
@@ -93,16 +93,15 @@
 
 @-moz-document regexp("chrome://browser/content/devtools/**/.*") {
     :root {
-        --theme-code-font-size: 14px !important;
+        --theme-code-font-size: 13px !important;
         --theme-body-font-size: 14px !important;
-        --monospace-font-family: "UbuntuMono NF", "Microsoft Yahei UI" !important;
-
+        --monospace-font-family: "UbuntuMono NF", "FiraCode NF", "JetBrains Mono", "Cascadia Code", "Microsoft Yahei UI" !important;
         font-family: "Ubuntu", "Microsoft Yahei UI" !important;
         font-size: var(--theme-body-font-size);
     }
 
     .CodeMirror {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 
     .devtools-tab-label {
