@@ -94,19 +94,20 @@
 @-moz-document regexp("chrome://browser/content/devtools/**/.*") {
     :root {
         --theme-code-font-size: 13px !important;
-        --theme-body-font-size: 14px !important;
-        --monospace-font-family: "UbuntuMono NF", "FiraCode NF", "JetBrains Mono", "Cascadia Code", "Microsoft Yahei UI" !important;
-        font-family: "Ubuntu", "Microsoft Yahei UI" !important;
-        font-size: var(--theme-body-font-size);
+        --theme-body-font-size: 13px !important;
+        --monospace-font-family: "JetBrains Mono", "FiraCode", "UbuntuMono NF", "FiraCode NF","Cascadia Code", "Microsoft Yahei UI" !important;
+        font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
+        font-size: 13px !important;
     }
 
     .CodeMirror {
         font-size: 13px !important;
+        font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
     }
 
     .devtools-tab-label {
-        font-size: 14px !important;
-        font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+        font-size: 13px !important;
+        font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
     }
 }
 
