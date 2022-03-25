@@ -96,7 +96,7 @@
         --theme-code-font-size: 12px !important;
         --theme-body-font-size: 12px !important;
         --monospace-font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
-        font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
+        font-family: "JetBrains Mono", "FiraCode", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI";
         font-size: 12px !important;
     }
 
