@@ -93,9 +93,9 @@
 
 @-moz-document regexp("chrome://browser/content/devtools/**/.*") {
     :root {
-        --theme-code-font-size: 13px !important;
+        --theme-code-font-size: 14px !important;
         --theme-body-font-size: 14px !important;
-        --monospace-font-family: "UbuntuMono NF", "FiraCode NF", "JetBrains Mono", "Cascadia Code", "Microsoft Yahei UI" !important;
+        --monospace-font-family: "FiraCode", "FiraCode NF", "JetBrains Mono", "Cascadia Code", "Microsoft Yahei UI" !important;
         font-family: "Ubuntu", "Microsoft Yahei UI" !important;
         font-size: var(--theme-body-font-size);
     }
@@ -107,6 +107,31 @@
     .devtools-tab-label {
         font-size: 14px !important;
         font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+    }
+
+    :root.theme-dark {
+        --theme-body-background: #121212 !important;
+        --theme-sidebar-background: #101416 !important;
+
+        --theme-tab-toolbar-background: #161A1E !important;
+        --theme-toolbar-background: #282E35 !important;
+        --theme-selection-background: #478DAD !important;
+
+        --theme-body-color: #ebdbb2 !important;
+        --theme-body-color-alt: #bdae93 !important;
+        --theme-content-color1: #ebdbb2 !important;
+        --theme-content-color2: #d5c4a1 !important;
+        --theme-content-color3: #bdae93 !important;
+
+        --theme-highlight-green: #689d6a !important;
+        --theme-highlight-blue: #83a598 !important;
+        --theme-highlight-bluegrey: #458588 !important;
+        --theme-highlight-lightorange: #d65d0e !important;
+        --theme-highlight-orange: #b8bb26 !important;
+        --theme-highlight-red: #fb4934 !important;
+        --theme-highlight-pink: #d3869b !important;
+        --theme-highlight-yellow: #d79921 !important;
+        --theme-highlight-purple: #b16286 !important;
     }
 }
 

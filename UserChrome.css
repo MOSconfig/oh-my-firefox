@@ -1,8 +1,3 @@
-* {
-    font-family: "Ubuntu", "Microsoft Yahei UI" !important;
-    font-size: 15px !important;
-}
-
 :root {
     --mtheme-background-1: #121212 !important;
     --mtheme-background-2: #232323 !important;
@@ -10,12 +5,26 @@
     --mtheme-foreground-2: #666666 !important;
 }
 
+* {
+    font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+    font-size: 15px !important;
+}
+
 #mainPopupSet menupopup {
     --panel-padding: 0 !important;
+    border: none !important;
+    --panel-border-color: #121212 !important;
 }
 
 #context-navigation:not([hidden]) {
     padding: 0 !important;
+}
+
+#context-sendpagetodevice, #context-sep-sendpagetodevice,
+#context-sendlinktodevice, #context-sep-sendlinktodevice,
+#context_sendTabToDevice, #context_sendTabToDevice_separator,
+#context-pocket {
+    display: none !important;
 }
 
 #mainPopupSet menuseparator {
