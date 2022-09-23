@@ -93,8 +93,8 @@
 
 @-moz-document regexp("chrome://browser/content/devtools/**/.*") {
     :root {
-        --theme-code-font-size: 12px !important;
-        --theme-body-font-size: 12px !important;
+        --theme-code-font-size: 13px !important;
+        --theme-body-font-size: 13px !important;
         --monospace-font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
         font-family: "Ubuntu", "Microsoft Yahei UI" !important;
         font-size: 15px;
@@ -126,7 +126,7 @@
     }
 
     .devtools-button[data-standalone] {
-        font-size: 12px;
+        font-size: 13px;
         font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
     }
 
@@ -144,7 +144,7 @@
     }
 
     .CodeMirror {
-        font-size: 12px !important;
+        font-size: 13px !important;
         font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
     }
 
