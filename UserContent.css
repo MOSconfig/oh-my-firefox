@@ -5,7 +5,7 @@
 
     #viewsource {
         font-style: normal !important;
-        font-family: "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
         font-size: 12px !important;
         line-height: 1.2em;
         font-weight: normal !important;
@@ -127,7 +127,7 @@
 
     .devtools-button[data-standalone] {
         font-size: 13px;
-        font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
     }
 
     .tabs .tabs-menu-item a {
@@ -140,17 +140,17 @@
         font-weight: normal;
         font-size: 15px !important;
         line-height: 16px !important;
-        font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
     }
 
     .CodeMirror {
         font-size: 13px !important;
-        font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
     }
 
     .devtools-tab-label {
         font-size: 15px !important;
-        font-family: "Ubuntu", "Microsoft Yahei UI" !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
     }
 }
 
