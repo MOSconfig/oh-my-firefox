@@ -55,3 +55,11 @@ browser[type=content-primary],
 browser[type=content] > html {
   background: var(--mtheme-background-1) !important
 }
+
+#PersonalToolbar .toolbarbutton-1 {
+    filter: grayscale(60%) !important;
+}
+
+toolbar .toolbaritem-combined-buttons > .toolbarbutton- {
+    filter: grayscale(60%) !important;
+}
