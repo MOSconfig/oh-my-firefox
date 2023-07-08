@@ -1,8 +1,8 @@
 :root {
-    --mtheme-background-1: #121212 !important;
-    --mtheme-background-2: #232323 !important;
-    --mtheme-foreground-1: #CCCCCC !important;
-    --mtheme-foreground-2: #666666 !important;
+    --mtheme-background-1: #282828 !important;
+    --mtheme-background-2: #3c3c3c !important;
+    --mtheme-foreground-1: #ebdbb2 !important;
+    --mtheme-foreground-2: #ebdbb2 !important;
 }
 
 * {
@@ -13,7 +13,7 @@
 #mainPopupSet menupopup {
     --panel-padding: 0 !important;
     border: none !important;
-    --panel-border-color: #121212 !important;
+    --panel-border-color: var(--mtheme-background-1) !important;
 }
 
 #context-navigation:not([hidden]) {

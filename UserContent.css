@@ -5,11 +5,11 @@
 
     #viewsource {
         font-style: normal !important;
-        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
-        font-size: 12px !important;
+        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-size: 14px !important;
         line-height: 1.2em;
         font-weight: normal !important;
-        background-color: #121212;
+        background-color: #282828;
         color: #ebdbb2 !important;
     }
 
@@ -93,18 +93,22 @@
 
 @-moz-document regexp("chrome://browser/content/devtools/**/.*") {
     :root {
-        --theme-code-font-size: 13px !important;
         --theme-body-font-size: 13px !important;
-        --monospace-font-family: "Fira Code", "Cascadia Code", "Ubuntu", "Microsoft Yahei UI" !important;
-        font-family: "Ubuntu", "Microsoft Yahei UI" !important;
-        font-size: 15px;
+        --theme-code-font-size: 12px !important;
+        --monospace-font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
+        --body-font-family: "Aptos", "Ubuntu", "Fira Code", "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-family: "Aptos", "Ubuntu", "Fira Code", "Cascadia Code", "Microsoft YaHei UI" !important;
     }
 
     :root.theme-dark {
-        --theme-body-background: #121212 !important;
-        --theme-sidebar-background: #101416 !important;
+        --theme-body-background: #282828 !important;
+        --theme-sidebar-background: #282828 !important;
 
-        --theme-tab-toolbar-background: #161A1E !important;
+        --theme-toolbar-hover: #3C3C3C !important;
+        --theme-toolbar-color: #ebdbb2 !important;
+        --theme-toolbar-selected-color: #689b6a !important;
+
+        --theme-tab-toolbar-background: #282828 !important;
         --theme-toolbar-background: #282E35 !important;
         --theme-selection-background: #478DAD !important;
 
@@ -126,37 +130,58 @@
     }
 
     .devtools-button[data-standalone] {
-        font-size: 13px;
-        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        font-family: var(--monospace-font-family);
+    }
+
+    html|button, html|select, html|input {
+        font-family: var(--body-font-family);
+        font-weight: 500 !important;
     }
 
     .tabs .tabs-menu-item a {
-        font-size: 16px;
-        font-family: "Aptos", "Ubuntu", "Fira Code", "Cascadia Code", "Microsoft Yahei UI" !important;
+    }
+    
+    .tree-widget-item[level="1"] {
+        font-weight: normal !important;
+    }
+
+    .toolbox-tabs,
+    .table-widget-empty-text {
+        font-weight: normal !important;
+        font-size: medium !important;
+    }
+
+    .devtools-responsive-container {
+        font-weight: normal !important;
+        font-size: small !important;
+    }
+
+    .source-header,
+    .source-outline-tabs,
+    .command-bar {
+        background-color: var(--theme-body-background);
     }
 
     .network-monitor .http-custom-request-panel textarea {
         color: #d5c4a1;
-        font-weight: normal;
-        font-size: 15px !important;
-        line-height: 16px !important;
-        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        font-weight: normal !important;
+        font-family: var(--monospace-font-family);
     }
 
     .CodeMirror {
-        font-size: 13px !important;
-        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        font-family: var(--monospace-font-family);
     }
 
     .devtools-tab-label {
-        font-size: 15px !important;
-        font-family: "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Micrsoft YaHei UI" !important;
+        color: var(--theme-body-color) !important;
+        font-weight: 400 !important;
+        font-size: 13px !important;
     }
 }
 
 /* This is a temporal solution for white flash, which is a well-known bug in Firefox. */
 html {
-    background: #121212;
+    background: #282828;
 }
 
 @-moz-document url("about:home"),
@@ -164,6 +189,6 @@ url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
     body {
-        background-color: #121212 !important
+        background-color: #282828 !important
     }
 }
