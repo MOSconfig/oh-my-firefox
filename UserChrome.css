@@ -6,8 +6,9 @@
 }
 
 * {
-    font-family: "Ubuntu", "Microsoft Yahei UI" !important;
-    font-size: 15px !important;
+    font-family: "Rec Mono Firefox", "Ubuntu", "Fira Code", "Cascadia Code", "Microsoft YaHei UI" !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
 }
 
 #mainPopupSet menupopup {
