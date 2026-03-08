@@ -5,7 +5,7 @@
 
     #viewsource {
         font-style: normal !important;
-        font-family: "Rec Mono Baker", "Rec Mono D0n9x1n", "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
+        font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
         font-weight: 550 !important;
         font-size: 13px !important;
         line-height: 1.1em;
@@ -96,9 +96,9 @@
     :root {
         --theme-body-font-size: 12px !important;
         --theme-code-font-size: 12px !important;
-        --monospace-font-family: "Rec Mono Firefox", "Rec Mono Casual", "Fira Code", "JetBrains Mono", "Cascadia Code", "Microsoft YaHei UI" !important;
-        --body-font-family: "Rec Mono Firefox", "Ubuntu", "Fira Code", "Cascadia Code", "Lantinghei SC", "Microsoft YaHei UI" !important;
-        font-family: "Rec Mono Firefox", "Ubuntu", "Fira Code", "Cascadia Code", "Lantinghei SC", "Microsoft YaHei UI" !important;
+        --monospace-font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
+        --body-font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
+        font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
         font-weight: 500 !important;
     }
 
