@@ -6,7 +6,7 @@
 }
 
 * {
-    font-family: "Rec Mono St.Helens", "Microsoft YaHei UI";
+    font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
     font-size: 14px !important;
     font-weight: 500 !important;
 }
@@ -40,12 +40,12 @@
 #mainPopupSet .menu-iconic-icon,
 #mainPopupSet menu {
     color: var(--mtheme-foreground-1) !important;
-    background: var(--mtheme-background-1) !important
+    background: var(--mtheme-background-1) !important;
 }
 
 #mainPopupSet menuitem:hover,
 #mainPopupSet menu:hover {
-    background: var(--mtheme-background-2) !important
+    background: var(--mtheme-background-2) !important;
 }
 
 #browser vbox#appcontent tabbrowser,
@@ -54,13 +54,10 @@
 browser,
 browser[type=content-primary],
 browser[type=content] > html {
-  background: var(--mtheme-background-1) !important
+    background: var(--mtheme-background-1) !important;
 }
 
 #PersonalToolbar .toolbarbutton-1 {
     filter: grayscale(60%) !important;
 }
 
-toolbar .toolbaritem-combined-buttons > .toolbarbutton- {
-    filter: grayscale(60%) !important;
-}

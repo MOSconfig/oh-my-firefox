@@ -6,11 +6,10 @@
     #viewsource {
         font-style: normal !important;
         font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-        font-weight: 550 !important;
-        font-size: 13px !important;
-        line-height: 1.1em;
         font-weight: normal !important;
-        background-color: #282828;
+        font-size: 13px !important;
+        line-height: 1.1em !important;
+        background-color: #282828 !important;
         color: #ebdbb2 !important;
     }
 
@@ -22,13 +21,13 @@
     }
 
     pre {
-        padding-left: 1ch;
+        padding-left: 1ch !important;
         margin-left: 6ch !important;
-        border-left: 2px solid #282828;
+        border-left: 2px solid #282828 !important;
     }
 
-    pre> :first-child {
-        padding-right: 1ch;
+    pre > :first-child {
+        padding-right: 1ch !important;
     }
 
     .highlight {
@@ -140,9 +139,6 @@
         font-weight: 500 !important;
     }
 
-    .tabs .tabs-menu-item a {
-    }
-
     .tree-widget-item[level="1"] {
         font-weight: normal !important;
     }
@@ -165,7 +161,7 @@
     }
 
     .network-monitor .http-custom-request-panel textarea {
-        color: #d5c4a1;
+        color: var(--theme-content-color2) !important;
         font-weight: normal !important;
         font-family: var(--monospace-font-family);
     }
@@ -191,6 +187,6 @@ url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
     body {
-        background-color: #282828 !important
+        background-color: #282828 !important;
     }
 }
