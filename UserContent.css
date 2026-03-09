@@ -1,192 +1,210 @@
 @-moz-document url-prefix("view-source:") {
-    *|*:root {
-        background: none !important;
-    }
+  * {
+    font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
 
-    #viewsource {
-        font-style: normal !important;
-        font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-        font-weight: normal !important;
-        font-size: 13px !important;
-        line-height: 1.1em !important;
-        background-color: #282828 !important;
-        color: #ebdbb2 !important;
-    }
+  *|*:root {
+    background: none !important;
+  }
 
-    pre[id]:before,
-    span[id]:before {
-        width: 6ch !important;
-        color: #ebdbb2 !important;
-        margin-left: -7ch !important;
-    }
+  #viewsource {
+    font-style: normal !important;
+    font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    font-size: 14px !important;
+    line-height: 1em !important;
+    background-color: #282828 !important;
+    color: #ebdbb2 !important;
+    white-space: pre !important;
+  }
 
-    pre {
-        padding-left: 1ch !important;
-        margin-left: 6ch !important;
-        border-left: 2px solid #282828 !important;
-    }
+  pre {
+    font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    font-size: inherit !important;
+    font-style: inherit !important;
+    color: inherit !important;
+    white-space: inherit !important;
+    padding-left: 1ch !important;
+    margin-left: 6ch !important;
+    border-left: 2px solid #504945 !important;
+  }
 
-    pre > :first-child {
-        padding-right: 1ch !important;
-    }
+  pre > :first-child {
+    padding-right: 1ch !important;
+  }
 
-    .highlight {
-        font-weight: normal !important;
-    }
+  pre[id]:before,
+  span[id]:before {
+    width: 6ch !important;
+    color: #a89984 !important;
+    margin-left: -7ch !important;
+  }
 
-    .highlight .start-tag {
-        color: #98971a !important;
-        font-weight: normal !important;
-    }
+  .start-tag,
+  .end-tag {
+    color: #8ec07c !important;
+    font-weight: normal !important;
+  }
 
-    .highlight .end-tag {
-        color: #98971a !important;
-        font-weight: normal !important;
-    }
+  .comment {
+    color: #928374 !important;
+    font-style: normal !important;
+  }
 
-    .highlight .comment {
-        color: #689d6a !important;
-        font-weight: normal !important;
-    }
+  .cdata {
+    color: #fe8019 !important;
+  }
 
-    .highlight .cdata {
-        color: #d65d0e !important;
-        font-weight: normal !important;
-    }
+  .doctype {
+    color: #d3869b !important;
+    font-style: normal !important;
+  }
 
-    .highlight .doctype {
-        color: #458588 !important;
-        font-weight: normal !important;
-    }
+  .markupdeclaration {
+    color: #83a598 !important;
+    font-style: normal !important;
+  }
 
-    .highlight .pi {
-        color: #83a598 !important;
-        font-weight: normal !important;
-    }
+  .pi {
+    color: #83a598 !important;
+    font-style: normal !important;
+  }
 
-    .highlight .entity {
-        color: #fe8019 !important;
-        font-weight: normal !important;
-    }
+  .entity {
+    color: #fabd2f !important;
+  }
 
-    .highlight .attribute-name {
-        color: #93a1a1 !important;
-        font-weight: normal !important;
-    }
+  .attribute-name {
+    color: #fabd2f !important;
+    font-weight: normal !important;
+  }
 
-    .highlight .attribute-value {
-        color: #83a598 !important;
-        font-weight: normal !important;
-    }
+  .attribute-value {
+    color: #b8bb26 !important;
+  }
 
-    .highlight .markupdeclaration {
-        color: #b8bb26 !important;
-        font-weight: normal !important;
-    }
+  .text {
+    color: #ebdbb2 !important;
+  }
 
-    .highlight .error,
-    .highlight .error> :-moz-any(.start-tag, .end-tag, .comment, .cdata, .doctype, .pi, .entity, .attribute-name, .attribute-value) {
-        color: #fb4934 !important;
-        font-weight: normal !important;
-    }
+  .error,
+  .error > .start-tag,
+  .error > .end-tag,
+  .error > .comment,
+  .error > .cdata,
+  .error > .doctype,
+  .error > .pi,
+  .error > .entity,
+  .error > .attribute-name,
+  .error > .attribute-value {
+    color: #fb4934 !important;
+    font-weight: bold !important;
+  }
 }
 
-@-moz-document regexp("chrome://browser/content/devtools/**/.*") {
-    :root {
-        --theme-body-font-size: 12px !important;
-        --theme-code-font-size: 12px !important;
-        --monospace-font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-        --body-font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-        font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-        font-weight: 500 !important;
-    }
+@-moz-document regexp("chrome://browser/content/devtools/**/.*")
+{
+  * {
+    font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
 
-    :root.theme-dark {
-        --theme-body-background: #282828 !important;
-        --theme-sidebar-background: #282828 !important;
+  :root {
+    --theme-body-font-size: 13px !important;
+    --theme-code-font-size: 13px !important;
+    --monospace-font-family:
+      "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    --body-font-family:
+      "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+    font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
+  }
 
-        --theme-toolbar-hover: #3C3C3C !important;
-        --theme-toolbar-color: #ebdbb2 !important;
-        --theme-toolbar-selected-color: #689b6a !important;
+  .devtools-toolbar-title {
+    font-size: 14px !important;
+  }
 
-        --theme-tab-toolbar-background: #282828 !important;
-        --theme-toolbar-background: #282E35 !important;
-        --theme-selection-background: #478DAD !important;
+  :root.theme-dark {
+    --theme-body-background: #282828 !important;
+    --theme-sidebar-background: #282828 !important;
 
-        --theme-body-color: #ebdbb2 !important;
-        --theme-body-color-alt: #bdae93 !important;
-        --theme-content-color1: #ebdbb2 !important;
-        --theme-content-color2: #d5c4a1 !important;
-        --theme-content-color3: #bdae93 !important;
+    --theme-toolbar-hover: #3c3c3c !important;
+    --theme-toolbar-color: #ebdbb2 !important;
+    --theme-toolbar-selected-color: #689b6a !important;
 
-        --theme-highlight-green: #689d6a !important;
-        --theme-highlight-blue: #83a598 !important;
-        --theme-highlight-bluegrey: #458588 !important;
-        --theme-highlight-lightorange: #d65d0e !important;
-        --theme-highlight-orange: #b8bb26 !important;
-        --theme-highlight-red: #fb4934 !important;
-        --theme-highlight-pink: #d3869b !important;
-        --theme-highlight-yellow: #d79921 !important;
-        --theme-highlight-purple: #b16286 !important;
-    }
+    --theme-tab-toolbar-background: #282828 !important;
+    --theme-toolbar-background: #282e35 !important;
+    --theme-selection-background: #478dad !important;
 
-    .devtools-button[data-standalone] {
-        font-family: var(--monospace-font-family);
-    }
+    --theme-body-color: #ebdbb2 !important;
+    --theme-body-color-alt: #bdae93 !important;
+    --theme-content-color1: #ebdbb2 !important;
+    --theme-content-color2: #d5c4a1 !important;
+    --theme-content-color3: #bdae93 !important;
 
-    html|button, html|select, html|input {
-        font-family: var(--body-font-family);
-        font-weight: 500 !important;
-    }
+    --theme-highlight-green: #689d6a !important;
+    --theme-highlight-blue: #83a598 !important;
+    --theme-highlight-bluegrey: #458588 !important;
+    --theme-highlight-lightorange: #d65d0e !important;
+    --theme-highlight-orange: #b8bb26 !important;
+    --theme-highlight-red: #fb4934 !important;
+    --theme-highlight-pink: #d3869b !important;
+    --theme-highlight-yellow: #d79921 !important;
+    --theme-highlight-purple: #b16286 !important;
+  }
 
-    .tree-widget-item[level="1"] {
-        font-weight: normal !important;
-    }
+  .devtools-button[data-standalone] {
+    font-family: var(--monospace-font-family);
+  }
 
-    .toolbox-tabs,
-    .table-widget-empty-text {
-        font-weight: normal !important;
-        font-size: medium !important;
-    }
+  html|button,
+  html|select,
+  html|input {
+    font-family: var(--body-font-family);
+  }
 
-    .devtools-responsive-container {
-        font-weight: normal !important;
-        font-size: small !important;
-    }
+  .tree-widget-item[level="1"] {
+  }
 
-    .source-header,
-    .source-outline-tabs,
-    .command-bar {
-        background-color: var(--theme-body-background);
-    }
+  .toolbox-tabs,
+  .table-widget-empty-text {
+    font-size: medium !important;
+  }
 
-    .network-monitor .http-custom-request-panel textarea {
-        color: var(--theme-content-color2) !important;
-        font-weight: normal !important;
-        font-family: var(--monospace-font-family);
-    }
+  .devtools-responsive-container {
+    font-size: small !important;
+  }
 
-    .CodeMirror {
-        font-family: var(--monospace-font-family);
-    }
+  .source-header,
+  .source-outline-tabs,
+  .command-bar {
+    background-color: var(--theme-body-background);
+  }
 
-    .devtools-tab-label {
-        color: var(--theme-body-color) !important;
-        font-weight: 400 !important;
-        font-size: 13px !important;
-    }
+  .network-monitor .http-custom-request-panel textarea {
+    color: var(--theme-content-color2) !important;
+    font-family: var(--monospace-font-family);
+  }
+
+  .CodeMirror {
+    font-family: var(--monospace-font-family);
+  }
+
+  .devtools-tab-label {
+    color: var(--theme-body-color) !important;
+    font-size: 14px !important;
+  }
 }
 
 /* This is a temporal solution for white flash, which is a well-known bug in Firefox. */
 html {
-    background: #282828;
+  background: #282828;
 }
 
 @-moz-document url("about:home"),
 url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
-    body {
-        background-color: #282828 !important;
-    }
+  body {
+    background-color: #282828 !important;
+  }
 }

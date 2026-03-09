@@ -1,63 +1,70 @@
 :root {
-    --mtheme-background-1: #282828 !important;
-    --mtheme-background-2: #3c3c3c !important;
-    --mtheme-foreground-1: #ebdbb2 !important;
-    --mtheme-foreground-2: #ebdbb2 !important;
+  --mtheme-background-1: #282828 !important;
+  --mtheme-background-2: #3c3c3c !important;
+  --mtheme-foreground-1: #ebdbb2 !important;
+  --mtheme-foreground-2: #ebdbb2 !important;
 }
 
 * {
-    font-family: "Rec Mono St.Helens", "Microsoft YaHei UI" !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
+  font-family: "Resource Han Rounded CN" !important;
+  font-size: 14px !important;
+  -moz-osx-font-smoothing: grayscale !important;
 }
 
 #mainPopupSet menupopup {
-    --panel-padding: 0 !important;
-    border: none !important;
-    --panel-border-color: var(--mtheme-background-1) !important;
+  --panel-padding: 0 !important;
+  border: none !important;
+  --panel-border-color: var(--mtheme-background-1) !important;
 }
 
 #context-navigation:not([hidden]) {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
-#context-sendpagetodevice, #context-sep-sendpagetodevice,
-#context-sendlinktodevice, #context-sep-sendlinktodevice,
-#context_sendTabToDevice, #context_sendTabToDevice_separator,
+#context-sendpagetodevice,
+#context-sep-sendpagetodevice,
+#context-sendlinktodevice,
+#context-sep-sendlinktodevice,
+#context_sendTabToDevice,
+#context_sendTabToDevice_separator,
 #context-pocket {
-    display: none !important;
+  display: none !important;
 }
 
 #mainPopupSet menuseparator {
-    appearance: none !important;
-    border-top: 1px solid var(--mtheme-background-2) !important;
-    border-bottom: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
+  appearance: none !important;
+  border-top: 1px solid var(--mtheme-background-2) !important;
+  border-bottom: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 #mainPopupSet menuitem,
 #mainPopupSet .menu-iconic-icon,
 #mainPopupSet menu {
-    color: var(--mtheme-foreground-1) !important;
-    background: var(--mtheme-background-1) !important;
+  color: var(--mtheme-foreground-1) !important;
+  background: var(--mtheme-background-1) !important;
 }
 
 #mainPopupSet menuitem:hover,
 #mainPopupSet menu:hover {
-    background: var(--mtheme-background-2) !important;
+  background: var(--mtheme-background-2) !important;
 }
 
 #browser vbox#appcontent tabbrowser,
 #content,
 #tabbrowser-tabpanels,
 browser,
-browser[type=content-primary],
-browser[type=content] > html {
-    background: var(--mtheme-background-1) !important;
+browser[type="content-primary"],
+browser[type="content"] > html {
+  background: var(--mtheme-background-1) !important;
 }
 
 #PersonalToolbar .toolbarbutton-1 {
-    filter: grayscale(60%) !important;
+  filter: grayscale(60%) !important;
 }
 
+.tabbrowser-tab .tab-label {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
