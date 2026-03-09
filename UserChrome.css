@@ -8,6 +8,7 @@
 * {
   font-family: "Resource Han Rounded CN" !important;
   font-size: 14px !important;
+  font-weight: 500 !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
 
@@ -66,5 +67,5 @@ browser[type="content"] > html {
 
 .tabbrowser-tab .tab-label {
   font-size: 15px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }

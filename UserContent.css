@@ -12,7 +12,7 @@
     font-style: normal !important;
     font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
     font-size: 14px !important;
-    line-height: 1em !important;
+    line-height: 1.3em !important;
     background-color: #282828 !important;
     color: #ebdbb2 !important;
     white-space: pre !important;
@@ -102,16 +102,15 @@
   }
 }
 
-@-moz-document regexp("chrome://browser/content/devtools/**/.*")
-{
+@-moz-document url-prefix("chrome://devtools/"), url-prefix("chrome://browser/content/devtools/") {
   * {
     font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
     -moz-osx-font-smoothing: grayscale !important;
   }
 
   :root {
-    --theme-body-font-size: 13px !important;
-    --theme-code-font-size: 13px !important;
+    --theme-body-font-size: 14px !important;
+    --theme-code-font-size: 14px !important;
     --monospace-font-family:
       "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
     --body-font-family:
