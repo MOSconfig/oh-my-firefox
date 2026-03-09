@@ -67,5 +67,5 @@ browser[type="content"] > html {
 
 .tabbrowser-tab .tab-label {
   font-size: 15px !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
