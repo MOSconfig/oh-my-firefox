@@ -13,7 +13,6 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 - macOS font antialiasing (`-moz-osx-font-smoothing: grayscale`)
 - Context menu cleanup (hidden: Send to Device, Pocket)
 - White flash prevention for new tabs / blank pages
-- Tampermonkey userscript to prepend preferred fonts on web content without breaking icon fonts
 
 
 #### Files
@@ -22,7 +21,6 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 |---|---|
 | `UserChrome.css` | Styles browser chrome (tabs, toolbars, menus, context menus) |
 | `UserContent.css` | Styles view-source pages, DevTools theming, and about: pages |
-| `prepend-fonts.user.js` | Tampermonkey userscript — prepends preferred fonts to web content font stacks |
 
 
 #### How to install
@@ -33,8 +31,7 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 3. Use `git clone https://github.com/MOSconfig/oh-my-firefox.git chrome` to download this theme.
 4. Open **about:config** and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
 5. *(Recommended)* Go to **Settings → Fonts and Colors → Advanced**, set **Proportional** to `Resource Han Rounded CN` and **Monospace** to `Rec Mono St.Helens`.
-6. *(Optional)* For web content font prepending: install [Tampermonkey](https://addons.mozilla.org/firefox/addon/tampermonkey/) and import `prepend-fonts.user.js`. This prepends your preferred fonts to every page's font stack without replacing site fonts or breaking icon fonts.
-7. Restart Firefox and enjoy.
+6. Restart Firefox and enjoy.
 
 
 #### Fonts
@@ -44,8 +41,6 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 | Browser UI | Resource Han Rounded CN | `UserChrome.css` |
 | DevTools | Rec Mono St.Helens | `UserContent.css` |
 | View-source | Rec Mono St.Helens | Firefox Preferences (`-moz-fixed`) |
-| Web content | Resource Han Rounded CN (prepended) | `prepend-fonts.user.js` via Tampermonkey |
-| Web content code | Rec Mono St.Helens (prepended) | `prepend-fonts.user.js` via Tampermonkey |
 
 
 #### Why doing this
