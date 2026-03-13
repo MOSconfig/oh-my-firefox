@@ -12,6 +12,16 @@
   -moz-osx-font-smoothing: grayscale !important;
 }
 
+/* Firefox renders the Windows caption buttons with icon-font glyphs. */
+.titlebar-button,
+.titlebar-button::before,
+.titlebar-button > .toolbarbutton-icon {
+  font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets" !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+}
+
 #mainPopupSet menupopup {
   --panel-padding: 0 !important;
   border: none !important;
