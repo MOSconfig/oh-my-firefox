@@ -19,8 +19,8 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 
 | File | Purpose |
 |---|---|
-| `UserChrome.css` | Styles browser chrome (tabs, toolbars, menus, context menus) |
-| `UserContent.css` | Styles view-source pages, DevTools theming, and about: pages |
+| `userChrome.css` | Styles browser chrome (tabs, toolbars, menus, context menus) |
+| `userContent.css` | Styles view-source pages, DevTools theming, and about: pages |
 
 
 #### How to install
@@ -38,8 +38,8 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark**
 
 | Context | Font | Method |
 |---|---|---|
-| Browser UI | Resource Han Rounded CN | `UserChrome.css` |
-| DevTools | Rec Mono St.Helens | `UserContent.css` |
+| Browser UI | Resource Han Rounded CN | `userChrome.css` |
+| DevTools | Rec Mono St.Helens | `userContent.css` |
 | View-source | Rec Mono St.Helens | Firefox Preferences (`-moz-fixed`) |
 
 

@@ -151,19 +151,6 @@
     --theme-highlight-purple: #b16286 !important;
   }
 
-  .devtools-button[data-standalone] {
-    font-family: var(--monospace-font-family);
-  }
-
-  html|button,
-  html|select,
-  html|input {
-    font-family: var(--body-font-family);
-  }
-
-  .tree-widget-item[level="1"] {
-  }
-
   .toolbox-tabs,
   .table-widget-empty-text {
     font-size: medium !important;
@@ -181,11 +168,6 @@
 
   .network-monitor .http-custom-request-panel textarea {
     color: var(--theme-content-color2) !important;
-    font-family: var(--monospace-font-family);
-  }
-
-  .CodeMirror {
-    font-family: var(--monospace-font-family);
   }
 
   .devtools-tab-label {

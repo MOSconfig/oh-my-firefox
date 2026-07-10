@@ -8,8 +8,8 @@ There is no build system, test suite, or linter — changes are pure CSS applied
 
 ## Architecture
 
-- **`UserChrome.css`** — Styles the browser chrome (tabs, toolbars, menus, context menus). Uses CSS custom properties defined on `:root` as the theme's color tokens.
-- **`UserContent.css`** — Styles in-content pages: `view-source:` syntax highlighting, DevTools theming (`chrome://browser/content/devtools/**`), and blank/new-tab backgrounds (`about:home`, `about:newtab`, `about:blank`, `about:privatebrowsing`).
+- **`userChrome.css`** — Styles the browser chrome (tabs, toolbars, menus, context menus). Uses CSS custom properties defined on `:root` as the theme's color tokens.
+- **`userContent.css`** — Styles in-content pages: `view-source:` syntax highlighting, DevTools theming (`chrome://devtools/` and `chrome://browser/content/devtools/`), and blank/new-tab backgrounds (`about:home`, `about:newtab`, `about:blank`, `about:privatebrowsing`).
 
 ## Key Conventions
 
@@ -30,7 +30,28 @@ When adding new rules, use the `--mtheme-*` custom properties from `:root` rathe
 
 ### Font Stack
 
-The preferred font is **Rec Mono Baker** (monospace), with fallbacks: `Rec Mono Firefox` → `Ubuntu` → `Fira Code` → `Cascadia Code` → `Microsoft YaHei UI`. Keep this font stack consistent when adding new rules.
+Two font families are used:
+
+- **UI font (browser chrome):** `Resource Han Rounded CN`, forced globally via the
+  `* { font-family: … !important }` rule at the top of `userChrome.css`.
+- **Monospace font (DevTools, view-source):** `Rec Mono St.Helens`, with
+  `Resource Han Rounded CN` as the fallback.
+
+Keep this pairing consistent when adding new rules: chrome UI uses the UI font,
+code/DevTools/view-source surfaces use the monospace stack.
+
+> **Caveat — the global `*` rule leaks into hidden glyphs.** Because
+> `* { font-size: 14px !important }` overrides *everything*, it can un-hide UI
+> elements that Firefox keeps invisible with tiny/clipped text (e.g. the Windows
+> caption buttons, and the hardcoded spacer `<span>a</span>` inside the
+> search-mode switcher). When such an artifact appears, add a narrowly-scoped
+> carve-out rather than weakening the global rule.
+
+### Filenames
+
+Firefox loads these stylesheets by exact, lowercase name: `userChrome.css` and
+`userContent.css`. Keep them lowercase — capitalized names only work by accident
+on case-insensitive filesystems (macOS/Windows) and fail silently on Linux.
 
 ### CSS Specificity
 
