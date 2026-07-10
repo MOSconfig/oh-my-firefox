@@ -109,8 +109,8 @@
   }
 
   :root {
-    --theme-body-font-size: 14px !important;
-    --theme-code-font-size: 14px !important;
+    --theme-body-font-size: 12px !important;
+    --theme-code-font-size: 12px !important;
     --monospace-font-family:
       "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
     --body-font-family:
@@ -119,7 +119,7 @@
   }
 
   .devtools-toolbar-title {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 
   :root.theme-dark {
@@ -134,26 +134,26 @@
     --theme-toolbar-background: #282828 !important; /* bg0 (was bluish #282e35) */
     --theme-selection-background: #458588 !important; /* neutral blue (was #478dad) */
 
-    --theme-body-color: #ebdbb2 !important;
-    --theme-body-color-alt: #bdae93 !important;
-    --theme-content-color1: #ebdbb2 !important;
-    --theme-content-color2: #d5c4a1 !important;
-    --theme-content-color3: #bdae93 !important;
+    --theme-body-color: #fbf1c7 !important; /* fg0 (brighter, higher contrast) */
+    --theme-body-color-alt: #d5c4a1 !important; /* fg2 (was dim #bdae93) */
+    --theme-content-color1: #fbf1c7 !important;
+    --theme-content-color2: #ebdbb2 !important;
+    --theme-content-color3: #d5c4a1 !important; /* was dim #bdae93 */
 
-    --theme-highlight-green: #689d6a !important;
+    --theme-highlight-green: #b8bb26 !important; /* bright green (was neutral #689d6a) */
     --theme-highlight-blue: #83a598 !important;
     --theme-highlight-bluegrey: #458588 !important;
-    --theme-highlight-lightorange: #d65d0e !important;
+    --theme-highlight-lightorange: #fe8019 !important; /* bright (was neutral #d65d0e) */
     --theme-highlight-orange: #fe8019 !important; /* bright orange (was #b8bb26 green) */
     --theme-highlight-red: #fb4934 !important;
     --theme-highlight-pink: #d3869b !important;
-    --theme-highlight-yellow: #d79921 !important;
-    --theme-highlight-purple: #b16286 !important;
+    --theme-highlight-yellow: #fabd2f !important; /* bright yellow (was neutral #d79921) */
+    --theme-highlight-purple: #b16286 !important; /* kept distinct from pink */
   }
 
   .toolbox-tabs,
   .table-widget-empty-text {
-    font-size: medium !important;
+    font-size: 12px !important;
   }
 
   .devtools-responsive-container {
@@ -172,7 +172,7 @@
 
   .devtools-tab-label {
     color: var(--theme-body-color) !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 }
 
