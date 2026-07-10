@@ -1,15 +1,15 @@
 FireFox Customized Theme
 ---
 
-Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark** colors and custom font setup.
+Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark Hard** colors and custom font setup.
 
 
 #### Features
 
-- **Gruvbox Dark** color scheme for browser chrome, DevTools, and view-source pages
+- **Gruvbox Dark Hard** color scheme for browser chrome, DevTools, and view-source pages
 - **Resource Han Rounded CN** as the default UI font (browser chrome)
 - **Rec Mono St.Helens** as the monospace font (DevTools, view-source)
-- **Gruvbox Medium** syntax highlighting for `view-source:` pages
+- **Gruvbox** syntax highlighting for `view-source:` pages
 - macOS font antialiasing (`-moz-osx-font-smoothing: grayscale`)
 - Context menu cleanup (hidden: Send to Device, Pocket)
 - White flash prevention for new tabs / blank pages

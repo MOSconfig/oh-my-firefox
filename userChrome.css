@@ -1,8 +1,9 @@
 :root {
-  --mtheme-background-1: #282828 !important;
-  --mtheme-background-2: #3c3c3c !important;
-  --mtheme-foreground-1: #ebdbb2 !important;
-  --mtheme-foreground-2: #ebdbb2 !important;
+  /* Gruvbox Dark Hard */
+  --mtheme-background-1: #1d2021 !important; /* bg0_hard */
+  --mtheme-background-2: #3c3836 !important; /* bg1 (hover / separators) */
+  --mtheme-foreground-1: #ebdbb2 !important; /* fg1 */
+  --mtheme-foreground-2: #d5c4a1 !important; /* fg2 */
 }
 
 * {

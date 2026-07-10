@@ -13,7 +13,7 @@
     font-family: "Rec Mono St.Helens", "Resource Han Rounded CN" !important;
     font-size: 14px !important;
     line-height: 1.3em !important;
-    background-color: #282828 !important;
+    background-color: #1d2021 !important;
     color: #ebdbb2 !important;
     white-space: pre !important;
   }
@@ -123,16 +123,16 @@
   }
 
   :root.theme-dark {
-    --theme-body-background: #282828 !important;
-    --theme-sidebar-background: #282828 !important;
+    --theme-body-background: #1d2021 !important; /* bg0_hard */
+    --theme-sidebar-background: #1d2021 !important;
 
-    --theme-toolbar-hover: #3c3c3c !important;
+    --theme-toolbar-hover: #3c3836 !important; /* bg1 */
     --theme-toolbar-color: #ebdbb2 !important;
-    --theme-toolbar-selected-color: #689b6a !important;
+    --theme-toolbar-selected-color: #689d6a !important; /* aqua (was #689b6a typo) */
 
-    --theme-tab-toolbar-background: #282828 !important;
-    --theme-toolbar-background: #282e35 !important;
-    --theme-selection-background: #478dad !important;
+    --theme-tab-toolbar-background: #282828 !important; /* bg0, elevated above hard body */
+    --theme-toolbar-background: #282828 !important; /* bg0 (was bluish #282e35) */
+    --theme-selection-background: #458588 !important; /* neutral blue (was #478dad) */
 
     --theme-body-color: #ebdbb2 !important;
     --theme-body-color-alt: #bdae93 !important;
@@ -144,7 +144,7 @@
     --theme-highlight-blue: #83a598 !important;
     --theme-highlight-bluegrey: #458588 !important;
     --theme-highlight-lightorange: #d65d0e !important;
-    --theme-highlight-orange: #b8bb26 !important;
+    --theme-highlight-orange: #fe8019 !important; /* bright orange (was #b8bb26 green) */
     --theme-highlight-red: #fb4934 !important;
     --theme-highlight-pink: #d3869b !important;
     --theme-highlight-yellow: #d79921 !important;
@@ -178,7 +178,7 @@
 
 /* This is a temporal solution for white flash, which is a well-known bug in Firefox. */
 html {
-  background: #282828;
+  background: #1d2021;
 }
 
 @-moz-document url("about:home"),
@@ -186,6 +186,6 @@ url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
   body {
-    background-color: #282828 !important;
+    background-color: #1d2021 !important;
   }
 }

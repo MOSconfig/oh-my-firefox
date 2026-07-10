@@ -15,14 +15,14 @@ There is no build system, test suite, or linter — changes are pure CSS applied
 
 ### Color Palette
 
-The theme uses **Gruvbox Dark** colors. All colors should come from this palette:
+The theme uses **Gruvbox Dark Hard** colors. All colors should come from this palette:
 
 | Token | Value | Role |
 |---|---|---|
-| `--mtheme-background-1` | `#282828` | Primary background |
-| `--mtheme-background-2` | `#3c3c3c` | Secondary background / hover |
-| `--mtheme-foreground-1` | `#ebdbb2` | Primary text |
-| `--mtheme-foreground-2` | `#ebdbb2` | Secondary text |
+| `--mtheme-background-1` | `#1d2021` | Primary background (bg0_hard) |
+| `--mtheme-background-2` | `#3c3836` | Secondary background / hover (bg1) |
+| `--mtheme-foreground-1` | `#ebdbb2` | Primary text (fg1) |
+| `--mtheme-foreground-2` | `#d5c4a1` | Secondary text (fg2) |
 
 DevTools uses additional Gruvbox accent colors (green `#689d6a`, blue `#83a598`, red `#fb4934`, yellow `#d79921`, etc.) mapped to `--theme-highlight-*` variables.
 
