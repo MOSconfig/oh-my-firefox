@@ -7,7 +7,7 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark H
 #### Features
 
 - **Gruvbox Dark Hard** color scheme for browser chrome, DevTools, and view-source pages
-- **Resource Han Rounded CN** as the default UI font (browser chrome)
+- **Rec Sans Mt.Baker** as the default UI font (browser chrome)
 - **Rec Mono St.Helens** as the monospace font (DevTools, view-source)
 - **Gruvbox** syntax highlighting for `view-source:` pages
 - macOS font antialiasing (`-moz-osx-font-smoothing: grayscale`)
@@ -30,7 +30,7 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark H
 2. Open a terminal here (PowerShell, Bash, Zsh — anything with `git`).
 3. Use `git clone https://github.com/MOSconfig/oh-my-firefox.git chrome` to download this theme.
 4. Open **about:config** and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.
-5. *(Recommended)* Go to **Settings → Fonts and Colors → Advanced**, set **Proportional** to `Resource Han Rounded CN` and **Monospace** to `Rec Mono St.Helens`.
+5. *(Recommended)* Go to **Settings → Fonts and Colors → Advanced**, set **Proportional** to `Rec Sans Mt.Baker` and **Monospace** to `Rec Mono St.Helens`.
 6. Restart Firefox and enjoy.
 
 
@@ -38,7 +38,7 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark H
 
 | Context | Font | Method |
 |---|---|---|
-| Browser UI | Resource Han Rounded CN | `userChrome.css` |
+| Browser UI | Rec Sans Mt.Baker | `userChrome.css` |
 | DevTools | Rec Mono St.Helens | `userContent.css` |
 | View-source | Rec Mono St.Helens | Firefox Preferences (`-moz-fixed`) |
 

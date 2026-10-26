@@ -32,10 +32,10 @@ When adding new rules, use the `--mtheme-*` custom properties from `:root` rathe
 
 Two font families are used:
 
-- **UI font (browser chrome):** `Resource Han Rounded CN`, forced globally via the
+- **UI font (browser chrome):** `Rec Sans Mt.Baker`, forced globally via the
   `* { font-family: … !important }` rule at the top of `userChrome.css`.
 - **Monospace font (DevTools, view-source):** `Rec Mono St.Helens`, with
-  `Resource Han Rounded CN` as the fallback.
+  `Rec Sans Mt.Baker` as the fallback.
 
 Keep this pairing consistent when adding new rules: chrome UI uses the UI font,
 code/DevTools/view-source surfaces use the monospace stack.
