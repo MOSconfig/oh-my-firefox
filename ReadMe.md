@@ -40,7 +40,7 @@ Yet, just another fully customized theme for Firefox, featuring the [**Apollo Da
 
 | Context | Font | Method |
 |---|---|---|
-| Browser UI | Rec Sans Mt.Baker 13px (tab titles 15px) | `userChrome.css` |
+| Browser UI | Rec Sans Mt.Baker 13px (tab titles 14px) | `userChrome.css` |
 | DevTools UI | Rec Sans Mt.Baker 13px | `userContent.css` |
 | DevTools code | Rec Mono St.Helens 12px | `userContent.css` |
 | View-source | Rec Mono St.Helens 12px | `userContent.css` |

@@ -95,5 +95,9 @@ browser[type="content"] > html {
 
 .tabbrowser-tab .tab-label {
   /* font-weight: 500 is already applied by the global `*` rule above. */
-  font-size: 15px !important;
+  font-size: 14px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-content {
+  padding-inline-start: calc(var(--tab-padding-inline, 8px) + 4px) !important;
 }
