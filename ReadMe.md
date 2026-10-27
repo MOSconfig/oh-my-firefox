@@ -1,15 +1,17 @@
 FireFox Customized Theme
 ---
 
-Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark Hard** colors and custom font setup.
+Yet, just another fully customized theme for Firefox, featuring the [**Apollo Dark**](https://github.com/apollo-theme/apollo-theme) palette and a custom font setup.
 
 
 #### Features
 
-- **Gruvbox Dark Hard** color scheme for browser chrome, DevTools, and view-source pages
+- **Apollo Dark** color scheme for browser chrome, DevTools (toolbox tabs included), and view-source pages
 - **Rec Sans Mt.Baker** as the default UI font (browser chrome)
-- **Rec Mono St.Helens** as the monospace font (DevTools, view-source)
-- **Gruvbox** syntax highlighting for `view-source:` pages
+- **Rec Mono St.Helens** as the code font (DevTools code surfaces, view-source)
+- DevTools UI text in Rec Sans 13px, code in Rec Mono 12px
+- **Apollo** syntax highlighting (matching Apollo for VS Code) in DevTools editors and `view-source:` pages
+  - Limitation: the Debugger's CodeMirror 6 tokenizer gives function calls the same class as variables, and `null` / `undefined` / `NaN` the keyword or variable class, so those can't get Apollo's yellow / magenta there (the Console's object previews do).
 - macOS font antialiasing (`-moz-osx-font-smoothing: grayscale`)
 - Context menu cleanup (hidden: Send to Device, Pocket)
 - White flash prevention for new tabs / blank pages
@@ -38,9 +40,10 @@ Yet, just another fully customized theme for Firefox, featuring **Gruvbox Dark H
 
 | Context | Font | Method |
 |---|---|---|
-| Browser UI | Rec Sans Mt.Baker | `userChrome.css` |
-| DevTools | Rec Mono St.Helens | `userContent.css` |
-| View-source | Rec Mono St.Helens | Firefox Preferences (`-moz-fixed`) |
+| Browser UI | Rec Sans Mt.Baker 13px (tab titles 15px) | `userChrome.css` |
+| DevTools UI | Rec Sans Mt.Baker 13px | `userContent.css` |
+| DevTools code | Rec Mono St.Helens 12px | `userContent.css` |
+| View-source | Rec Mono St.Helens 12px | `userContent.css` |
 
 
 #### Why doing this

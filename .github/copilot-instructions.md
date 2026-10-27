@@ -9,24 +9,26 @@ There is no build system, test suite, or linter — changes are pure CSS applied
 ## Architecture
 
 - **`userChrome.css`** — Styles the browser chrome (tabs, toolbars, menus, context menus). Uses CSS custom properties defined on `:root` as the theme's color tokens.
-- **`userContent.css`** — Styles in-content pages: `view-source:` syntax highlighting, DevTools theming (`chrome://devtools/` and `chrome://browser/content/devtools/`), and blank/new-tab backgrounds (`about:home`, `about:newtab`, `about:blank`, `about:privatebrowsing`).
+- **`userContent.css`** — Styles in-content pages: `view-source:` syntax highlighting, DevTools theming (the `about:devtools-toolbox` frame that holds the tool tabs, plus the `chrome://devtools/` and `chrome://browser/content/devtools/` panels), and blank/new-tab backgrounds (`about:home`, `about:newtab`, `about:blank`, `about:privatebrowsing`).
 
 ## Key Conventions
 
 ### Color Palette
 
-The theme uses **Gruvbox Dark Hard** colors. All colors should come from this palette:
+The theme uses the [**Apollo Dark**](https://github.com/apollo-theme/apollo-theme) palette. All colors should come from it:
 
 | Token | Value | Role |
 |---|---|---|
-| `--mtheme-background-1` | `#1d2021` | Primary background (bg0_hard) |
-| `--mtheme-background-2` | `#3c3836` | Secondary background / hover (bg1) |
-| `--mtheme-foreground-1` | `#ebdbb2` | Primary text (fg1) |
-| `--mtheme-foreground-2` | `#d5c4a1` | Secondary text (fg2) |
+| `--mtheme-background-1` | `#141617` | Canvas (page / content background) |
+| `--mtheme-surface` | `#1d2021` | Surface (menus, toolbars) |
+| `--mtheme-background-2` | `#3c3836` | Selection / hover / separators |
+| `--mtheme-foreground-1` | `#cfbc97` | Primary text |
+| `--mtheme-foreground-2` | `#d5c4a1` | Secondary text |
+| `--mtheme-accent` | `#fabd2f` | Focus / selected accent |
 
-DevTools uses additional Gruvbox accent colors (green `#689d6a`, blue `#83a598`, red `#fb4934`, yellow `#d79921`, etc.) mapped to `--theme-highlight-*` variables.
+Accents: red `#fb4934`, green `#b8bb26`, blue `#83a598`, magenta `#d3869b`, cyan `#8ec07c`, inactive text `#928374`. Syntax colors follow Apollo for VS Code (keywords red, strings green, numbers magenta, types/attributes yellow, properties blue, tags cyan, comments `#928374` italic).
 
-When adding new rules, use the `--mtheme-*` custom properties from `:root` rather than hardcoding hex values. In DevTools sections, use the `--theme-*` variables.
+When adding new rules in `userChrome.css`, use the `--mtheme-*` custom properties rather than hardcoding hex values. `userContent.css` cannot read those tokens, so it repeats the hex values (listed in its header comment); in DevTools sections, prefer the `--theme-*` variables.
 
 ### Font Stack
 
@@ -34,8 +36,16 @@ Two font families are used:
 
 - **UI font (browser chrome):** `Rec Sans Mt.Baker`, forced globally via the
   `* { font-family: … !important }` rule at the top of `userChrome.css`.
-- **Monospace font (DevTools, view-source):** `Rec Mono St.Helens`, with
+- **Monospace font (DevTools code, view-source):** `Rec Mono St.Helens`, with
   `Rec Sans Mt.Baker` as the fallback.
+
+In DevTools, UI text is Rec Sans 13px and code is Rec Mono 12px. "Code" follows
+Firefox's own split: whatever it renders with `--monospace-font-family` (the
+`.devtools-monospace`, `.cm-editor`, `.CodeMirror`, `.tag-line`, `.message`, …
+containers listed in `userContent.css`). A new code surface goes in both code
+lists (as `X` and `X *`). The font rules use `:where()` so specificity stays in
+fixed tiers — UI (0) < code (1) < UI nested inside code (2) — whatever selectors
+the lists hold; keep new font rules inside that scheme.
 
 Keep this pairing consistent when adding new rules: chrome UI uses the UI font,
 code/DevTools/view-source surfaces use the monospace stack.
@@ -59,4 +69,4 @@ Nearly all declarations use `!important` to override Firefox's built-in styles. 
 
 ### Context Menu Cleanup
 
-Unwanted context menu items (Send to Device, Pocket) are hidden via `display: none !important` on their element IDs. New items to hide should follow the same pattern in the existing ID list block in `UserChrome.css`.
+Unwanted context menu items (Send to Device, Pocket) are hidden via `display: none !important` on their element IDs. New items to hide should follow the same pattern in the existing ID list block in `userChrome.css`.

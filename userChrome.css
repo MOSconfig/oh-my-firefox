@@ -1,9 +1,11 @@
 :root {
-  /* Gruvbox Dark Hard */
-  --mtheme-background-1: #1d2021 !important; /* bg0_hard */
-  --mtheme-background-2: #3c3836 !important; /* bg1 (hover / separators) */
-  --mtheme-foreground-1: #ebdbb2 !important; /* fg1 */
-  --mtheme-foreground-2: #d5c4a1 !important; /* fg2 */
+  /* Apollo Dark (https://github.com/apollo-theme/apollo-theme) */
+  --mtheme-background-1: #141617 !important; /* canvas */
+  --mtheme-background-2: #3c3836 !important; /* selection (hover / separators) */
+  --mtheme-surface: #1d2021 !important; /* surface (menus) */
+  --mtheme-foreground-1: #cfbc97 !important; /* text */
+  --mtheme-foreground-2: #d5c4a1 !important; /* secondary text */
+  --mtheme-accent: #fabd2f !important; /* focus */
 }
 
 * {
@@ -31,7 +33,7 @@
 /* Firefox hardcodes `<span class="urlbar-visually-hidden">a</span>` inside the
    search-mode switcher button (see UrlbarInput.mjs) purely so moz-button thinks
    it has text. It's meant to be clipped away by .urlbar-visually-hidden, but the
-   global `* { font-size: 14px }` above bloats the glyph past the 1px clip box,
+   global `* { font-size: 13px }` above bloats the glyph past the 1px clip box,
    leaking a stray "a" into the address bar. Collapse it back. */
 .searchmode-switcher > .urlbar-visually-hidden {
   font-size: 0 !important;
@@ -41,7 +43,7 @@
 #mainPopupSet menupopup {
   --panel-padding: 0 !important;
   border: none !important;
-  --panel-border-color: var(--mtheme-background-1) !important;
+  --panel-border-color: var(--mtheme-surface) !important;
 }
 
 #context-navigation:not([hidden]) {
@@ -70,7 +72,7 @@
 #mainPopupSet .menu-iconic-icon,
 #mainPopupSet menu {
   color: var(--mtheme-foreground-1) !important;
-  background: var(--mtheme-background-1) !important;
+  background: var(--mtheme-surface) !important;
 }
 
 #mainPopupSet menuitem:hover,

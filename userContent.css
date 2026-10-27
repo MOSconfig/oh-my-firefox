@@ -1,3 +1,11 @@
+/* Apollo Dark (https://github.com/apollo-theme/apollo-theme).
+   userContent.css cannot read the --mtheme-* tokens in userChrome.css, so the
+   palette is spelled out here:
+     canvas #141617   surface #1d2021   selection #3c3836
+     text #cfbc97     secondary #d5c4a1 bright #fbf1c7   inactive #928374
+     yellow #fabd2f   red #fb4934       green #b8bb26    blue #83a598
+     magenta #d3869b  cyan #8ec07c */
+
 @-moz-document url-prefix("view-source:") {
   * {
     font-family: "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
@@ -11,10 +19,10 @@
   #viewsource {
     font-style: normal !important;
     font-family: "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
-    font-size: 14px !important;
-    line-height: 1.3em !important;
-    background-color: #1d2021 !important;
-    color: #ebdbb2 !important;
+    font-size: 12px !important;
+    line-height: 16px !important;
+    background-color: #141617 !important;
+    color: #cfbc97 !important;
     white-space: pre !important;
   }
 
@@ -26,7 +34,7 @@
     white-space: inherit !important;
     padding-left: 1ch !important;
     margin-left: 6ch !important;
-    border-left: 2px solid #504945 !important;
+    border-left: 2px solid #3c3836 !important;
   }
 
   pre > :first-child {
@@ -36,7 +44,7 @@
   pre[id]:before,
   span[id]:before {
     width: 6ch !important;
-    color: #a89984 !important;
+    color: #928374 !important;
     margin-left: -7ch !important;
   }
 
@@ -48,11 +56,11 @@
 
   .comment {
     color: #928374 !important;
-    font-style: normal !important;
+    font-style: italic !important;
   }
 
   .cdata {
-    color: #fe8019 !important;
+    color: #b8bb26 !important;
   }
 
   .doctype {
@@ -84,7 +92,7 @@
   }
 
   .text {
-    color: #ebdbb2 !important;
+    color: #cfbc97 !important;
   }
 
   .error,
@@ -102,62 +110,402 @@
   }
 }
 
-@-moz-document url-prefix("chrome://devtools/"), url-prefix("chrome://browser/content/devtools/") {
+/* DevTools. The toolbox frame (tabs, toolbar) is about:devtools-toolbox; the
+   panels inside it are chrome://devtools/ documents. */
+@-moz-document url-prefix("chrome://devtools/"), url-prefix("chrome://browser/content/devtools/"), url-prefix("about:devtools-toolbox") {
+  /* Fonts: UI text is Rec Sans 13px, code is Rec Mono 12px. "Code" follows
+     Firefox's own split: everything it renders with --monospace-font-family. */
+  :root {
+    --theme-body-font-size: 13px !important;
+    --theme-code-font-size: 12px !important;
+    --theme-code-line-height: calc(16 / 12) !important;
+    --monospace-font-family: "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
+    --body-font-family: "Rec Sans Mt.Baker" !important;
+  }
+
+  /* Specificity tiers (all !important): UI 0 < code 1 < UI-inside-code 2.
+     :where() keeps each list at its tier no matter what selectors it holds. */
   * {
-    font-family: "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
+    font-family: "Rec Sans Mt.Baker" !important;
     -moz-osx-font-smoothing: grayscale !important;
   }
 
-  :root {
-    --theme-body-font-size: 12px !important;
-    --theme-code-font-size: 12px !important;
-    --monospace-font-family:
-      "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
-    --body-font-family:
-      "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
+  /* Firefox hardcodes 11px/12px on many UI labels; deliberately small or large
+     text (badges, waterfall timings, empty-state text) and labels it hides with
+     font-size: 0 behind icon buttons keep their own size. */
+  :where(:not(
+    .inspector-badge,
+    .reference-element-type,
+    .devtools-tab-badge,
+    .requests-list-cause-stack,
+    .requests-list-timings-division,
+    .requests-list-timings-total,
+    .table-widget-empty-text,
+    .error-page__details,
+    .theme-twisty,
+    #filter-container :is(.remove-button, .add),
+    #toggle-presets,
+    .offscreen
+  )) {
+    font-size: 13px !important;
+  }
+
+  /* Code containers and everything inside them: what Firefox styles with
+     --monospace-font-family. Add new code surfaces to both lists. */
+  :root :where(
+    .devtools-monospace,
+    .devtools-monospace *,
+    .CodeMirror,
+    .CodeMirror *,
+    .cm-editor,
+    .cm-editor *,
+    .tag-line,
+    .tag-line *,
+    .message,
+    .message *,
+    .jsterm-input-container,
+    .jsterm-input-container *,
+    .eager-evaluation-result,
+    .eager-evaluation-result *,
+    .editor-mount,
+    .editor-mount *,
+    .outline-list,
+    .outline-list *,
+    .project-text-search .result,
+    .project-text-search .result *,
+    .why-paused :is(.location, .message, .mutationNode),
+    .why-paused :is(.location, .message, .mutationNode) *,
+    .expression-container .tree-node[aria-level="1"] .object-label,
+    .expression-container .tree-node[aria-level="1"] .object-label *,
+    .input-expression,
+    .input-expression *,
+    .tracer-tab .frame-link-function-display-name,
+    .tracer-tab .frame-link-function-display-name *,
+    .network-monitor .stack-trace,
+    .network-monitor .stack-trace *,
+    .network-monitor .raw-headers-container textarea,
+    .network-monitor .raw-headers-container textarea *,
+    #messages-view .message-rawData-payload,
+    #messages-view .message-rawData-payload *,
+    .heap-tree-number,
+    .heap-tree-number *,
+    .heap-tree-percent,
+    .heap-tree-percent *,
+    .heap-tree-item-address,
+    .heap-tree-item-address *,
+    .error-page__details,
+    .error-page__details *,
+    .app-error-panel .stack-trace-section p,
+    .app-error-panel .stack-trace-section p *,
+    .status-code,
+    .status-code *,
+    .shortcutKey,
+    .shortcutKey *,
+    #emulation-panel a,
+    #emulation-panel a *,
+    .tracer-tab .search-outline input:not(:placeholder-shown)
+  ) {
     font-family: "Rec Mono St.Helens", "Rec Sans Mt.Baker" !important;
   }
 
-  .devtools-toolbar-title {
+  :root :where(
+    .devtools-monospace,
+    .devtools-monospace *,
+    .CodeMirror,
+    .CodeMirror *,
+    .cm-editor,
+    .cm-editor *,
+    .tag-line,
+    .tag-line *,
+    .message,
+    .message *,
+    .jsterm-input-container,
+    .jsterm-input-container *,
+    .eager-evaluation-result,
+    .eager-evaluation-result *,
+    .editor-mount,
+    .editor-mount *,
+    .outline-list,
+    .outline-list *,
+    .project-text-search .result,
+    .project-text-search .result *,
+    .why-paused :is(.location, .message, .mutationNode),
+    .why-paused :is(.location, .message, .mutationNode) *,
+    .expression-container .tree-node[aria-level="1"] .object-label,
+    .expression-container .tree-node[aria-level="1"] .object-label *,
+    .input-expression,
+    .input-expression *,
+    .tracer-tab .frame-link-function-display-name,
+    .tracer-tab .frame-link-function-display-name *,
+    .network-monitor .stack-trace,
+    .network-monitor .stack-trace *,
+    .network-monitor .raw-headers-container textarea,
+    .network-monitor .raw-headers-container textarea *,
+    #messages-view .message-rawData-payload,
+    #messages-view .message-rawData-payload *,
+    .heap-tree-number,
+    .heap-tree-number *,
+    .heap-tree-percent,
+    .heap-tree-percent *,
+    .heap-tree-item-address,
+    .heap-tree-item-address *,
+    .error-page__details *,
+    .app-error-panel .stack-trace-section p,
+    .app-error-panel .stack-trace-section p *,
+    .status-code,
+    .status-code *,
+    .shortcutKey,
+    .shortcutKey *,
+    #emulation-panel a,
+    #emulation-panel a *,
+    .tracer-tab .search-outline input:not(:placeholder-shown)
+  ):where(:not(.inspector-badge, .reference-element-type)) {
     font-size: 12px !important;
   }
 
+  /* UI nested inside code containers: box-model labels, the Debugger's
+     conditional-breakpoint buttons, CodeMirror search/replace dialogs. */
+  :root:root :where(
+    .boxmodel-element-size,
+    .boxmodel-element-position,
+    .layout-properties-header,
+    .flex-header-container-label,
+    .conditional-breakpoint-panel-controls,
+    .conditional-breakpoint-panel-controls *,
+    .CodeMirror-dialog,
+    .CodeMirror-dialog *
+  ) {
+    font-family: "Rec Sans Mt.Baker" !important;
+    font-size: 13px !important;
+  }
+
+  /* Colors */
   :root.theme-dark {
-    --theme-body-background: #1d2021 !important; /* bg0_hard */
-    --theme-sidebar-background: #1d2021 !important;
+    --theme-body-background: #141617 !important; /* canvas */
+    --theme-sidebar-background: #141617 !important;
+    --theme-body-emphasized-background: #1d2021 !important;
+    --theme-body-alternate-emphasized-background: #1d2021 !important;
 
-    --theme-toolbar-hover: #3c3836 !important; /* bg1 */
-    --theme-toolbar-color: #ebdbb2 !important;
-    --theme-toolbar-selected-color: #689d6a !important; /* aqua (was #689b6a typo) */
+    --theme-tab-toolbar-background: #1d2021 !important; /* surface */
+    --theme-toolbar-background: #1d2021 !important;
+    --theme-toolbar-alternate-background: #1d2021 !important;
+    --theme-toolbar-background-alt: #1d2021 !important;
+    --theme-toolbar-background-hover: #3c3836 !important;
+    --theme-toolbar-hover: #3c3836 !important;
+    --theme-toolbar-alternate-hover: #3c3836 !important;
+    --theme-toolbar-hover-active: #3c3836 !important;
+    --theme-toolbar-color: #cfbc97 !important;
+    --theme-toolbar-selected-color: #fabd2f !important;
+    --theme-toolbar-highlighted-color: #b8bb26 !important;
+    --theme-toolbar-separator: #3c3836 !important;
+    --theme-toolbarbutton-color: #cfbc97 !important;
+    --theme-toolbarbutton-checked-color: #fabd2f !important;
 
-    --theme-tab-toolbar-background: #282828 !important; /* bg0, elevated above hard body */
-    --theme-toolbar-background: #282828 !important; /* bg0 (was bluish #282e35) */
-    --theme-selection-background: #458588 !important; /* neutral blue (was #478dad) */
+    --theme-selection-background: #3c3836 !important;
+    --theme-selection-background-hover: #1c1f20 !important;
+    --theme-selection-focus-background: #3c3836 !important;
+    --theme-selection-color: #fbf1c7 !important;
+    --theme-text-selection-background: #3c3836 !important;
+    --theme-text-selection-unfocused-background: rgb(60 56 54 / 0.6) !important;
+    --theme-popup-background: #1d2021 !important;
+    --theme-popup-color: #cfbc97 !important;
+    --theme-popup-border-color: #3c3836 !important;
+    --theme-popup-dimmed: rgb(60 56 54 / 0.6) !important;
+    --theme-select-background: #1d2021 !important;
+    --theme-select-color: #cfbc97 !important;
+    --theme-select-hover-border-color: #3c3836 !important;
+    --theme-splitter-color: #3c3836 !important;
+    --tab-line-selected-color: #fabd2f !important;
+    --tab-line-hover-color: #3c3836 !important;
+    --theme-focus-outline-color: #fabd2f !important;
 
-    --theme-body-color: #fbf1c7 !important; /* fg0 (brighter, higher contrast) */
-    --theme-body-color-alt: #d5c4a1 !important; /* fg2 (was dim #bdae93) */
+    --theme-body-color: #cfbc97 !important;
+    --theme-body-color-alt: #d5c4a1 !important;
+    --theme-text-color-strong: #fbf1c7 !important;
+    --theme-text-color-alt: #928374 !important;
+    --theme-text-color-inactive: #928374 !important;
     --theme-content-color1: #fbf1c7 !important;
-    --theme-content-color2: #ebdbb2 !important;
-    --theme-content-color3: #d5c4a1 !important; /* was dim #bdae93 */
+    --theme-content-color2: #cfbc97 !important;
+    --theme-content-color3: #d5c4a1 !important;
+    --theme-comment: #928374 !important;
+    --theme-icon-color: #cfbc97 !important;
+    --theme-icon-dimmed-color: #928374 !important;
+    --theme-icon-checked-color: #fabd2f !important;
+    --theme-link-color: #83a598 !important;
 
-    --theme-highlight-green: #b8bb26 !important; /* bright green (was neutral #689d6a) */
+    --theme-highlight-green: #b8bb26 !important;
     --theme-highlight-blue: #83a598 !important;
-    --theme-highlight-bluegrey: #458588 !important;
-    --theme-highlight-lightorange: #fe8019 !important; /* bright (was neutral #d65d0e) */
-    --theme-highlight-orange: #fe8019 !important; /* bright orange (was #b8bb26 green) */
+    --theme-highlight-bluegrey: #83a598 !important;
+    --theme-highlight-purple: #d3869b !important;
     --theme-highlight-red: #fb4934 !important;
     --theme-highlight-pink: #d3869b !important;
-    --theme-highlight-yellow: #fabd2f !important; /* bright yellow (was neutral #d79921) */
-    --theme-highlight-purple: #b16286 !important; /* kept distinct from pink */
+    --theme-highlight-orange: #fabd2f !important;
+    --theme-highlight-lightorange: #fabd2f !important;
+    --theme-highlight-yellow: #fabd2f !important;
+
+    --theme-warning-background: rgb(250 189 47 / 0.08) !important;
+    --theme-warning-border: rgb(250 189 47 / 0.25) !important;
+    --theme-warning-color: #fabd2f !important;
+    --theme-error-background: rgb(251 73 52 / 0.08) !important;
+    --theme-error-border: rgb(251 73 52 / 0.25) !important;
+    --theme-error-color: #fb4934 !important;
+
+    /* Console object previews (reps) */
+    --string-color: #b8bb26 !important;
+    --number-color: #d3869b !important;
+    --null-color: #928374 !important;
+    --object-color: #83a598 !important;
+    --caption-color: #fabd2f !important;
+    --node-color: #8ec07c !important;
+    --reference-color: #83a598 !important;
+    --location-color: #928374 !important;
+    --console-output-color: #cfbc97 !important;
   }
 
-  .toolbox-tabs,
-  .table-widget-empty-text {
-    font-size: 12px !important;
+  /* Syntax highlighting, following Apollo for VS Code. CodeMirror 6 (Debugger,
+     Console input) uses .tok-*; CodeMirror 5 (Style Editor) uses .cm-*. */
+  :is(.cm-editor, .cm-highlighted) :is(.tok-keyword, .tok-modifier, .tok-controlKeyword, .tok-operatorKeyword),
+  .cm-s-mozilla :is(.cm-keyword, .cm-builtin) {
+    color: #fb4934 !important;
   }
 
-  .devtools-responsive-container {
-    font-size: small !important;
+  :is(.cm-editor, .cm-highlighted) :is(.tok-string, .tok-string2),
+  .cm-s-mozilla :is(.cm-string, .cm-string-2) {
+    color: #b8bb26 !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-number, .tok-bool, .tok-atom, .tok-literal),
+  .cm-s-mozilla :is(.cm-number, .cm-atom) {
+    color: #d3869b !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-comment, .tok-meta),
+  .cm-s-mozilla :is(.cm-comment, .cm-meta) {
+    color: #928374 !important;
+    font-style: italic !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-variableName, .tok-variableName2, .tok-definition),
+  .cm-s-mozilla :is(.cm-variable, .cm-variable-2, .cm-def) {
+    color: #cfbc97 !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) .tok-propertyName,
+  .cm-s-mozilla .cm-property {
+    color: #83a598 !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-typeName, .tok-className),
+  .cm-s-mozilla :is(.cm-variable-3, .cm-type, .cm-qualifier) {
+    color: #fabd2f !important;
+  }
+
+  /* HTML tag names: CM6 falls back to .tok-typeName; only those right after "<". */
+  .cm-editor .tok-punctuation + .tok-typeName {
+    color: #8ec07c !important;
+  }
+
+  /* HTML attribute names (Firefox's own heuristic) */
+  .cm-editor .tok-propertyName:has(+ .tok-operator),
+  .cm-s-mozilla .cm-attribute {
+    color: #fabd2f !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-tagName, .tok-heading),
+  .cm-s-mozilla :is(.cm-tag, .cm-header) {
+    color: #8ec07c !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) :is(.tok-punctuation, .tok-operator),
+  .cm-s-mozilla :is(.cm-operator, .cm-bracket) {
+    color: #d5c4a1 !important;
+  }
+
+  :is(.cm-editor, .cm-highlighted) .tok-invalid,
+  .cm-s-mozilla .cm-error {
+    color: #fb4934 !important;
+  }
+
+  .cm-editor .cm-cursor,
+  .cm-s-mozilla .CodeMirror-cursor {
+    border-left-color: #fabd2f !important;
+  }
+
+  .cm-editor .cm-gutters,
+  .CodeMirror-gutters {
+    background-color: #141617 !important;
+  }
+
+  .cm-editor .cm-gutterElement,
+  .CodeMirror-linenumber {
+    color: #928374 !important;
+  }
+
+  /* Inspector markup view and rule view */
+  .tag,
+  .ruleview-selector-element,
+  .ruleview-selector .ruleview-selector-matched {
+    color: #8ec07c !important;
+  }
+
+  .attr-name {
+    color: #fabd2f !important;
+  }
+
+  .attr-value {
+    color: #b8bb26 !important;
+  }
+
+  .editor.comment:not(.doctype),
+  .editor.comment:not(.doctype) :is(.tag, pre, span) {
+    color: #928374 !important;
+    font-style: italic !important;
+  }
+
+  .ruleview-propertyname {
+    color: #83a598 !important;
+  }
+
+  .ruleview-propertyvalue {
+    color: #d5c4a1 !important;
+  }
+
+  .ruleview-color {
+    color: #d3869b !important;
+  }
+
+  /* Console object previews. Logged strings read as plain output; strings
+     inside objects stay green. */
+  .message-body > .objectBox-string {
+    color: #cfbc97 !important;
+  }
+
+  .objectBox-function {
+    color: #fabd2f !important;
+  }
+
+  .objectBox-function > .objectTitle {
+    color: #fb4934 !important;
+  }
+
+  .objectBox-function > .param {
+    color: #d5c4a1 !important;
+  }
+
+  :is(.objectBox-null, .objectBox-undefined, .objectBox-nan) {
+    color: #d3869b !important;
+  }
+
+  .objectBox-node .tag-name {
+    color: #8ec07c !important;
+  }
+
+  .objectBox-node .attrName {
+    color: #fabd2f !important;
+  }
+
+  .objectBox-node .attrValue {
+    color: #b8bb26 !important;
   }
 
   .source-header,
@@ -169,16 +517,11 @@
   .network-monitor .http-custom-request-panel textarea {
     color: var(--theme-content-color2) !important;
   }
-
-  .devtools-tab-label {
-    color: var(--theme-body-color) !important;
-    font-size: 12px !important;
-  }
 }
 
 /* This is a temporal solution for white flash, which is a well-known bug in Firefox. */
 html {
-  background: #1d2021;
+  background: #141617;
 }
 
 @-moz-document url("about:home"),
@@ -186,6 +529,6 @@ url("about:blank"),
 url("about:newtab"),
 url("about:privatebrowsing") {
   body {
-    background-color: #1d2021 !important;
+    background-color: #141617 !important;
   }
 }
