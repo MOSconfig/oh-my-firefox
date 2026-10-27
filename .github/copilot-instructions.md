@@ -41,7 +41,7 @@ Keep this pairing consistent when adding new rules: chrome UI uses the UI font,
 code/DevTools/view-source surfaces use the monospace stack.
 
 > **Caveat — the global `*` rule leaks into hidden glyphs.** Because
-> `* { font-size: 14px !important }` overrides *everything*, it can un-hide UI
+> `* { font-size: 13px !important }` overrides *everything*, it can un-hide UI
 > elements that Firefox keeps invisible with tiny/clipped text (e.g. the Windows
 > caption buttons, and the hardcoded spacer `<span>a</span>` inside the
 > search-mode switcher). When such an artifact appears, add a narrowly-scoped
